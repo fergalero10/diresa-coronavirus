@@ -34,7 +34,7 @@
 			<tbody>
 				@foreach($pacientes as $paciente)
 				<tr>
-					<th scope="row">{{$paciente->NOMBRES}} {{$paciente->APELLIDOS}}</th>
+					<th>{{$paciente->NOMBRES}} {{$paciente->APELLIDOS}}</th>
 					<td>{{$paciente->DNI}}</td>
 					<td>{{$paciente->CORREO}}</td>
 					<td>{{$paciente->CELULAR}}</td>

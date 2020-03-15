@@ -302,7 +302,7 @@
 									<div class="form-group  col-md-10">
 										<input type="text" placeholder="direccion"
 											class="form-control @error('direccion') is-invalid @enderror"
-											id="Escribenos" name="Escribenos"
+											id="direccion" name="direccion"
 											value="{{ old('Escribenos') }}" autocomplete="Escribenos">
 										@error('Escribenos') <span class="invalid-feedback"
 											role="alert"> <strong>{{ $message }}</strong>

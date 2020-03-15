@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Bienvenido a Diresa
+                    Bienvenido a DIRESA
                 </div>
             </div>
         </div>

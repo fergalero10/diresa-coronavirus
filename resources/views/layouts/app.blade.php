@@ -30,6 +30,13 @@
 <!-- Styles -->
 <link href="{{ asset('dist/css/adminlte.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<!-- Custom -->
+
+<link rel="stylesheet" href="{{ asset('dist/css/carmen/style.css')}}">
+<link rel="stylesheet"
+	href="{{ asset('dist/css/carmen/formulario.css')}}">
+	
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -84,7 +91,7 @@
 			<!-- Main Sidebar Container -->
 			<aside class="main-sidebar sidebar-dark-primary elevation-4">
 				<!-- Brand Logo -->
-				<a href="{{ url('/') }}" class="brand-link"> <img
+				<a href="{{ url('/home') }}" class="brand-link"> <img
 					src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8"> <span
 					class="brand-text font-weight-light">Sistema DIRESA</span>
@@ -115,8 +122,8 @@
 						<ul class="nav nav-pills nav-sidebar flex-column"
 							data-widget="treeview" role="menu" data-accordion="false">
 
-							<li class="nav-item"><a href="/"
-								class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
+							<li class="nav-item"><a href="/home"
+								class="{{ Request::path() === 'home' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-home"></i>
 									<p>Inicio</p>
 							</a></li>
@@ -125,9 +132,7 @@
 								class="{{ Request::path() === 'coronavirus' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-book"></i>
 									<p>Coronavirus</p>
-							</a></li> 
-							
-							@if (auth()->check())
+							</a></li> @if (auth()->check())
 							<li class="nav-item"><a href="usuarios"
 								class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-users"></i>
@@ -136,13 +141,11 @@
 											$users_count ?? '0' }}</span>
 									</p>
 							</a></li>
-							
+
 							<li class="nav-item"><a href="reportes"
 								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-medkit"></i>
-									<p>
-										Reportes 
-									</p>
+									<p>Reportes</p>
 							</a></li>
 
 

@@ -3,8 +3,8 @@
 
 <div class="container">
 	<h2>
-		Listado de Pacientes <a href="{{url('coronavirus/create')}}"><button
-				type="button" class="btn btn-success float-right">Agregar</button></a>
+		Listado de Pacientes <a href="{{route('reporte.export')}}"><button
+				type="button" class="btn btn-info float-right"><i class="fas fa-download"></i> Descargar Reporte</button></a>
 	</h2>
 	@if($search)
 	<div class="alert alert-primary" role="alert">Los resultados para tu

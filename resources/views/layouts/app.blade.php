@@ -153,17 +153,18 @@
 								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-medkit"></i>
 									<p>Reportes</p>
-							</a></li> 
+							</a></li>
 
 
-<li class="nav-item"><a href="https://api.whatsapp.com/send?phone=+51976777798" target="_blank"
-								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
+							<li class="nav-item"><a
+								href="https://api.whatsapp.com/send?phone=+51976777798"
+								target="_blank"
+								class="{{ Request::path() === 'reportessss' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-phone"></i>
 									<p>Comunicate con Nosotros</p>
-							</a></li>
-							@if (auth()->check())
+							</a></li> @if (auth()->check())
 
-							
+
 							<li class="nav-item"><a href="{{ route('logout') }}"
 								class="nav-link"
 								onclick="event.preventDefault();

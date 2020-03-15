@@ -21,5 +21,5 @@ Route::get('/', 'CoronavirusController@index')->name('index');
 Route::resource('usuarios', 'UserController');
 Route::get('/aviso', 'CoronavirusController@aviso');
 Route::resource('coronavirus', 'CoronavirusController');
-
+Route::get('reportes/export', 'ReporteController@export')->name('reporte.export');
 Route::resource('reportes', 'ReporteController');

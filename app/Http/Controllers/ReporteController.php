@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Paciente;
 use Illuminate\Http\Request;
+use App\Exports\PacienteExport;
+use Maatwebsite\Excel\Facades\Excel;
 class ReporteController extends Controller
 {
     
@@ -27,4 +29,10 @@ class ReporteController extends Controller
             ]);
         }
     }
+    
+    public function export(){
+        return Excel::download(new PacienteExport(),'reporte_coronavirus.xlsx');
+        
+    }
+    
 }

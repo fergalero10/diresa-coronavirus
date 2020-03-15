@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('usuarios', 'UserController');
-
+Route::get('/aviso', 'CoronavirusController@aviso');
 Route::resource('coronavirus', 'CoronavirusController');
 
 Route::resource('reportes', 'ReporteController');

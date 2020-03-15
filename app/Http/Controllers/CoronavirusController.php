@@ -34,6 +34,10 @@ class CoronavirusController extends Controller
         ]);
         */
     }
+    
+    public function aviso(){
+        return View('coronavirus.aviso');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -87,7 +91,7 @@ class CoronavirusController extends Controller
         }
         $paciente->save();
         
-        return redirect('/coronavirus');
+      return redirect('/aviso');
     }
 
     private function obtenerEqCheckBox($valor, $default)

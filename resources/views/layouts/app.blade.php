@@ -36,6 +36,12 @@
 <link rel="stylesheet" href="{{ asset('dist/css/carmen/style.css')}}">
 <link rel="stylesheet"
 	href="{{ asset('dist/css/carmen/formulario.css')}}">
+	<script>
+      $(document).ready(function()
+      {
+         $("#mostrarmodal").modal({backdrop: 'static', keyboard: false});
+      });
+</script>
 	
 </head>
 

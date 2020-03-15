@@ -100,7 +100,7 @@
 				<a href="#" class="brand-link"> <img
 					src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8"> <span
-					class="brand-text font-weight-light">Sistema DIRESA</span>
+					class="brand-text font-weight-light">DIRESA PIURA</span>
 				</a>
 
 				<!-- Sidebar -->
@@ -153,8 +153,17 @@
 								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-medkit"></i>
 									<p>Reportes</p>
-							</a></li> @if (auth()->check())
+							</a></li> 
 
+
+<li class="nav-item"><a href="https://api.whatsapp.com/send?phone=+51976777798" target="_blank"
+								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
+									<i class="nav-icon fas fa-phone"></i>
+									<p>Comunicate con Nosotros</p>
+							</a></li>
+							@if (auth()->check())
+
+							
 							<li class="nav-item"><a href="{{ route('logout') }}"
 								class="nav-link"
 								onclick="event.preventDefault();

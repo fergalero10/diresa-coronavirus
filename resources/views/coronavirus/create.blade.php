@@ -83,7 +83,7 @@
 								<div class="row">
 									<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fas fa-edit bigicon"></i></span>
-									<p class="text-left header">En los últimos 14 dias a viajado a:</p>
+									<p class="text-left header">En los &uacuteltimos 14 dias a viajado a:</p>
 
 								</div>
 
@@ -220,7 +220,7 @@
 								<div class="row">
 									<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fas fa-edit bigicon"></i></span>
-									<p class="text-left header">A tenido contacto con algún
+									<p class="text-left header">A tenido contacto con alg&uacuten
 										paciente confirmado de CORONAVIRUS:</p>
 								</div>
 								<p class="card-text">

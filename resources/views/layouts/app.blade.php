@@ -36,13 +36,13 @@
 <link rel="stylesheet" href="{{ asset('dist/css/carmen/style.css')}}">
 <link rel="stylesheet"
 	href="{{ asset('dist/css/carmen/formulario.css')}}">
-	<script>
+<script>
       $(document).ready(function()
       {
          $("#mostrarmodal").modal({backdrop: 'static', keyboard: false});
       });
 </script>
-	
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -97,7 +97,7 @@
 			<!-- Main Sidebar Container -->
 			<aside class="main-sidebar sidebar-dark-primary elevation-4">
 				<!-- Brand Logo -->
-				<a href="{{ url('/home') }}" class="brand-link"> <img
+				<a href="#" class="brand-link"> <img
 					src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8"> <span
 					class="brand-text font-weight-light">Sistema DIRESA</span>
@@ -127,34 +127,33 @@
 					<nav class="mt-2">
 						<ul class="nav nav-pills nav-sidebar flex-column"
 							data-widget="treeview" role="menu" data-accordion="false">
-
-							<li class="nav-item"><a href="/home"
+							<!-- 
+							<li class="nav-item"><a href="{{url('home')}}"
 								class="{{ Request::path() === 'home' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-home"></i>
 									<p>Inicio</p>
 							</a></li>
+							 -->
 
-							<li class="nav-item"><a href="/coronavirus"
+
+							<li class="nav-item"><a href="{{url('coronavirus')}}"
 								class="{{ Request::path() === 'coronavirus' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-book"></i>
 									<p>Coronavirus</p>
 							</a></li> @if (auth()->check())
-							<li class="nav-item"><a href="usuarios"
+							<li class="nav-item"><a href="{{url('usuarios')}}"
 								class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-users"></i>
 									<p>
 										Usuarios <span class="right badge badge-danger">{{
 											$users_count ?? '0' }}</span>
 									</p>
-							</a></li>
-
-							<li class="nav-item"><a href="reportes"
+							</a></li> @endif
+							<li class="nav-item"><a href="{{url('reportes')}}"
 								class="{{ Request::path() === 'reportes' ? 'nav-link active' : 'nav-link' }}">
 									<i class="nav-icon fas fa-medkit"></i>
 									<p>Reportes</p>
-							</a></li>
-
-
+							</a></li> @if (auth()->check())
 
 							<li class="nav-item"><a href="{{ route('logout') }}"
 								class="nav-link"

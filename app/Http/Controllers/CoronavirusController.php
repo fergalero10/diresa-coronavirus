@@ -19,15 +19,16 @@ class CoronavirusController extends Controller
      */
     public function index(Request $request)
     {
-        
+        return View('coronavirus.create');
+        /*
         if($request){
             $query =  trim($request->get('search'));
-            $users=Paciente::where('NOMBRES','LIKE','%'. $query.'%')->orderBy('NOMBRES','asc')->get();
+            $users=Paciente::where('NOMBRES','LIKE','%'. $query.'%')->orderBy('NOMBRES','asc')->paginate(5);
             return View('coronavirus.index', [
                 'pacientes' => $users,'search'=>$query
             ]);
         }
-        /*
+       
         $pacientes = Paciente::all();
         return View('coronavirus.index', [
             'pacientes' => $pacientes
@@ -65,7 +66,7 @@ class CoronavirusController extends Controller
         $paciente->DNI = request("dni");
         $paciente->CORREO = request("email");
         $paciente->CELULAR = request("celular");
-
+        $paciente->DIRECCION = request("direccion");
        
         $paciente->FIEBRE = $this->obtenerEqCheckBox(request("fiebre"), "FIEBRE");
         $paciente->TOS = $this->obtenerEqCheckBox(request("tos"), "TOS");

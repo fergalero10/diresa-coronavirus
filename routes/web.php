@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', 'CoronavirusController@index')->name('index');
 //Route::get('/home', 'HomeController@index')->name('home');

@@ -59,7 +59,6 @@ class CoronavirusController extends Controller
     public function store(PacienteStoreRequest $request)
     {
         Log::debug('An informational message.');
-
         $paciente = new Paciente();
         $paciente->NOMBRES = request("nombre");
         $paciente->APELLIDOS = request("apellido");
